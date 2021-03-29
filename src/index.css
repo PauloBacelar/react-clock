@@ -1,12 +1,17 @@
-@import url(https://allfont.net/allfont.css?fonts=digital-7);
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
 
-@font-face {
-  font-family: "Digital-7";
-  src: local("Digital-7"), local("Digital-7"), url("./font/digital-7.ttf");
-}
-
-body,
-html {
+* {
   margin: 0;
   padding: 0;
+  overflow: hidden;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  min-width: 200px;
 }

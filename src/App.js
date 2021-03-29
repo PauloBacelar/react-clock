@@ -2,14 +2,20 @@ import React from "react";
 
 const styles = {
   h1: {
-    fontFamily: "Digital-7",
-    color: "white",
+    fontSize: "5rem",
+  },
+
+  h1Max540px: {
+    fontSize: "2.5rem",
   },
 
   div: {
     backgroundColor: "#1A1A1B",
-    width: "99vw",
-    height: "99vh",
+    width: "100vw",
+    height: "100vh",
+    minWidth: "300px",
+    fontFamily: "Orbitron",
+    color: "#f0f0f0",
   },
 };
 
@@ -32,7 +38,9 @@ class App extends React.Component {
   render() {
     return (
       <div style={styles.div}>
-        <h1 style={styles.h1}>{this.state.date.toLocaleTimeString()}</h1>
+        <h1 style={window.screen.width > 450 ? styles.h1 : styles.h1Max540px}>
+          {this.state.date.toLocaleTimeString()}
+        </h1>
       </div>
     );
   }
